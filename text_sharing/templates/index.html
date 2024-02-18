@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Text</title>
+</head>
+<body>
+    <h1>Enter your text below</h1>
+    <form method="post" style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 20px;">
+        {% csrf_token %}
+        <label for="text">Enter your text here</label>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        <button type="submit">Save</button>
+
+        <p>{{ url }}</p>
+    </form>
+</body>
+</html>
